@@ -20,7 +20,7 @@ public class AuthManager implements AuthService{
 			System.out.println("Þifre an az 6 karakterden oluþmalýdýr ve email alaný boþ býrakýlamaz.");
 			return false;
 		
-		}else if (user.getFirstName().length()<=2 && user.getLastName().length()<=2) {
+		}if (user.getFirstName().length()<=2 && user.getLastName().length()<=2) {
 			System.out.println("Kullanýcý adý veya soyadý en az 2 karakter olamalýdýr.");
 			return false;
 		}else {
@@ -33,12 +33,14 @@ public class AuthManager implements AuthService{
 	}
 
 	@Override
-	public void login(User user) {
+	public boolean login(User user) {
 		if (emailList.contains(user.getEmail())) {
 			System.out.println("Kullanýcý emaili zaten mevcut");
+			return false;
 		}
 		else {
 			System.out.println("Baþarýyla sisteme giriþ yapýldý");
+			return true;
 		}
 		
 		

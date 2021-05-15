@@ -19,8 +19,8 @@ public class jGoogleLoggerAdapter implements AuthService{
 	}
 
 	@Override
-	public void login(User user) {
-		// TODO Auto-generated method stub
+	public boolean login(User user) {
+		return true;
 		
 	}
 

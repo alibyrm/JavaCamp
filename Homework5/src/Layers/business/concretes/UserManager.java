@@ -38,6 +38,7 @@ public class UserManager implements UserService{
 		
 		
 		
+		
 	}
 
 	@Override
@@ -51,6 +52,12 @@ public class UserManager implements UserService{
 	public void update(User user) {
 		userdao.update(user);
 		System.out.println("Kullanýcý güncellendi");
+		
+	}
+
+	@Override
+	public void login(User user) {
+		authService.login(user);
 		
 	}
 

@@ -20,14 +20,13 @@ public class Main {
 		
 			
 		User user= new User(1,"Ali","Osman","1234566","aliosman@gmail.com");
-		User user2= new User(2,"Halit","Bayram","6654321","halit6@gmail.com");
+		User user2= new User(2,"Halit","Bayram","661","halit6@gmail.com");
 		
 		
 		
 
 		UserService userService = new UserManager(new HibernateUserDao(),new AuthManager(),new EmailManager());
 		userService.add(user2);
-		
 		
 		
 		
